@@ -1,11 +1,21 @@
 ﻿# Hotel ter Tuin.
-A school project about a hotel reservation system.
+ 
+Project : "Hotel Reservation System"
 
-functions thats is working:
+- Developed a school project for a hotel reservation system, managing room reservations.
+- Enabled users to select rooms, specify check-in and check-out dates, and book rooms.
+- Implemented an authentication system for administrators, utilizing database verification. Admin can login using name: 1, password: 1.
+- Designed an administrative Control Management System (CMS) to manage reservation data.
+- In the CMS, displayed reservation details, including reservation ID, guest information (ID and name), room type, check-in, and check-out dates.
+- Admins could edit reservation details with updates instantly reflected in the database.
 
-User can choose what room he wants and fill in the dates to make a room reservation. 
+Technologies Used:
 
-Admin can login using name: 1, password: 1. The login is being checked from the database. if it match you will have acces to the CMS.
+Languages: [HTML, Css, PHP]
+Database: [MySQL]
 
-In the CMS you can see all the data about the reservations. Like the reservation id, Guest ID	, Guest Name, Room Type, Check-In Date, Check-Out Date. 
-You also can edit these and it will directly be updated in the database.
+Achievements:
+
+- Successfully designed and implemented the hotel reservation system, including user and admin functionality.
+- Created a secure authentication process for admin access to the CMS.
+- Successfully going through active participation in coding, testing, and troubleshooting.
