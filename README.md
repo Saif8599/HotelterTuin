@@ -1,5 +1,5 @@
 ﻿# Hotel ter Tuin.
- 
+
 Project : "Hotel Reservation System"
 
 - Developed a school project for a hotel reservation system, managing room reservations.
@@ -11,7 +11,7 @@ Project : "Hotel Reservation System"
 
 Technologies Used:
 
-Languages: [HTML, Css, PHP]
+Languages: [HTML, CSS, PHP]
 Database: [MySQL]
 
 Achievements:
