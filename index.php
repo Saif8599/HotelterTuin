@@ -1,5 +1,6 @@
 <?php
 include_once('connection.php');
+header('Content-Type: text/html; charset=utf-8');
 ?>
 <html>
 
