@@ -13,7 +13,7 @@ include_once('../connection.php');
     <a href="../admin/reservations.php" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
       <span class="text-gray-200">Reservations</span>
     </a>
-    <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
+    <a href="../admin/guests.php" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 focus:outline-none focus:bg-gray-700">
       <span class="text-gray-200">Guests</span>
     </a>
     <a href="../admin/logout.php" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-gray-700 focus:outline-none focus:bg-gray-700">

@@ -68,93 +68,77 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <title>Reservation Page</title>
 </head>
 
-<body>
-    <!-- Navbar -->
-    <nav class=" border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
-        <div class="container flex flex-wrap items-center justify-between mx-auto">
-            <span class="text-xl font-semibold dark:text-white">Hotel ter tuin</span>
-            <div class="hidden w-full md:block md:w-auto">
-                <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                    <li>
-                        <a href="index.php" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0">Home</a>
-                    </li>
-                    <li>
-                        <a href="reservation.php" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0">Kamers</a>
-                    </li>
-                    <li>
-                        <a href="services.php" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0">Services</a>
-                    </li>
-                    <li>
-                        <a href="contact.php" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0">Contact</a>
-                    </li>
-                    <li>
-                        <a href="../admin/login.php" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0">Login</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- Navbar -->
+<body class="bg-gray-100">
+    <?php include('../blocks/navbar.php'); ?>
+    <div class="container mx-auto px-4 pt-10">
+        <div class="flex justify-center">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+                <!-- Single Room Card -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="https://picsum.photos/seed/65/500/300" class="mb-4 rounded-lg">
+                    <h2 class="text-xl font-semibold text-gray-800">Single Room</h2>
+                    <p class="text-gray-600 mt-2">Experience a cozy and comfortable stay in our single rooms. Perfect for solo travelers.</p>
+                    <a href="room-details.php" class="text-blue-500 hover:underline mt-4 block">Check Details</a>
+                </div>
 
-    <div class="container mx-auto px-4 ">
-        <!-- Rooms -->
-        <div class="flex justify-center pb-10">
-            <div class="flex-row md:flex bg-gray-300">
-                <div class="flex flex-col items-center">
-                    <img src="https://picsum.photos/seed/65/500/300">
-                    <a class="">Single Room</a>
-                    <a>Missed lovers way one vanity wishes nay but. Use shy seemed within twenty wished old few regret passed. Absolute one hastened mrs any sensible</a>
-                    <a href="room-details.php">Check Details</a>
+                <!-- Double Room Card -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="https://picsum.photos/seed/54/500/300" class="mb-4 rounded-lg">
+                    <h2 class="text-xl font-semibold text-gray-800">Double Room</h2>
+                    <p class="text-gray-600 mt-2">Our double rooms provide extra space and comfort for a relaxing stay.</p>
+                    <a href="room-details.php" class="text-blue-500 hover:underline mt-4 block">Check Details</a>
                 </div>
-                <div class="flex flex-col items-center">
-                    <img src="https://picsum.photos/seed/54/500/300">
-                    <a class="">Double Room</a>
-                    <a>Missed lovers way one vanity wishes nay but. Use shy seemed within twenty wished old few regret passed. Absolute one hastened mrs any sensible</a>
-                    <a href="room-details.php">Check Details</a>
-                </div>
-                <div class="flex flex-col items-center">
-                    <img src="https://picsum.photos/seed/36/500/300">
-                    <a class="">Suite</a>
-                    <a>Missed lovers way one vanity wishes nay but. Use shy seemed within twenty wished old few regret passed. Absolute one hastened mrs any sensible</a>
-                    <a href="room-details.php">Check Details</a>
+
+                <!-- Suite Room Card -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <img src="https://picsum.photos/seed/36/500/300" class="mb-4 rounded-lg">
+                    <h2 class="text-xl font-semibold text-gray-800">Suite</h2>
+                    <p class="text-gray-600 mt-2">Indulge in luxury with our spacious and well-appointed suites.</p>
+                    <a href="room-details.php" class="text-blue-500 hover:underline mt-4 block">Check Details</a>
                 </div>
             </div>
         </div>
-        <!-- Rooms -->
-        <form class="grid gap-4 grid-cols-1" method="post" action="reservation.php">
-            <div class="">
-                <label for="guest_name">Guest Name:</label>
-                <input type="text" id="guest_name" name="guest_name" required>
+        <form class="mt-10 max-w-md mx-auto bg-white p-6 rounded-lg shadow-md" method="post" action="reservation.php">
+            <h1 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Make a Reservation</h1>
+            <div class="mb-4">
+                <label for="guest_name" class="text-gray-800">Guest Name</label>
+                <input type="text" id="guest_name" name="guest_name" required class="w-full px-4 py-2 border rounded focus:ring focus:border-blue-300">
             </div>
 
-            <div class="">
-                <label for="guest_email">Guest Email:</label>
-                <input type="email" id="guest_email" name="guest_email" required>
+            <div class="mb-4">
+                <label for="guest_email" class="text-gray-800">Guest Email</label>
+                <input type="email" id="guest_email" name="guest_email" required class="w-full px-4 py-2 border rounded focus:ring focus:border-blue-300">
             </div>
 
-            <div class="">
-                <label for="room_type">Room Type:</label>
-                <select id="room_type" name="room_type">
+            <div class="mb-4">
+                <label for="room_type" class="text-gray-800">Room Type</label>
+                <select id="room_type" name="room_type" class="w-full px-4 py-2 border rounded focus:ring focus:border-blue-300">
                     <option value="Single">Single Room</option>
                     <option value="Double">Double Room</option>
                     <option value="Suite">Suite</option>
                 </select>
             </div>
 
-            <div class="">
-                <label for="checkin_date">Check-in Date:</label>
-                <input type="date" id="checkin_date" name="checkin_date" required>
+            <div class="mb-4">
+                <label for="checkin_date" class="text-gray-800">Check-in Date</label>
+                <input type="date" id="checkin_date" name="checkin_date" required class="w-full px-4 py-2 border rounded focus:ring focus:border-blue-300">
             </div>
 
-            <div class="">
-                <label for="checkout_date">Check-out Date:</label>
-                <input type="date" id="checkout_date" name="checkout_date" required>
+            <div class="mb-4">
+                <label for="checkout_date" class="text-gray-800">Check-out Date</label>
+                <input type="date" id="checkout_date" name="checkout_date" required class="w-full px-4 py-2 border rounded focus:ring focus:border-blue-300">
             </div>
-            <div class="border-2 rounded-full border-black text-red-500 text-center">
-                <button type="submit" value="Submit">Submit</button>
+
+            <div class="mb-6">
+                <button type="submit" value="Submit" class="w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300 ease-in-out">
+                    Submit
+                </button>
             </div>
         </form>
     </div>
 </body>
+
+
+
 
 </html>

@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `hotel_ter_tuin`
 --
-
+CREATE Database hotel_ter_tuin;
 -- --------------------------------------------------------
 
 --
