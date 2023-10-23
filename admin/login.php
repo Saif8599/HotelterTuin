@@ -59,7 +59,7 @@ function LoggedInUser($conn, $username, $password)
         <?php include('../blocks/navbar.php'); ?>
         <div class="flex items-center justify-center min-h-screen bg-gray-200">
             <form class="bg-white p-8 rounded-lg shadow-md w-96" action="login.php" method="POST">
-                <h1 class="text-3xl text-center text-gray-800 mb-6">Hotel ter Tuin Admin Panel</h1>
+                <h1 class="text-4xl font-semibold text-center text-gray-800 mb-6">Hotel ter Tuin Admin Panel</h1>
 
                 <div class="mb-4">
                     <input type="text" name="username" placeholder="Username" class="w-full px-4 py-2 border rounded focus:ring focus:border-blue-300">
@@ -69,7 +69,7 @@ function LoggedInUser($conn, $username, $password)
                     <input type="password" name="password" placeholder="Password" class="w-full px-4 py-2 border rounded focus:ring focus:border-blue-300">
                 </div>
 
-                <div class="mb-6">
+                <div class="mb-4">
                     <button type="submit" name="submit" class="w-full px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300 ease-in-out">
                         Login
                     </button>
